@@ -82,5 +82,11 @@ namespace OOP1
         public double GetWeight() { return Weight; }
         public void SetWeight(double weight) { Weight= weight; }
 
+        public string GetPriceInUAH()
+        {
+            double res = Price * Cost.GetExRate();
+            return $"Ціна одиниці товару - {res} грн.";
+        }
+
     }
 }
