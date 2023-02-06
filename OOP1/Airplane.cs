@@ -81,6 +81,11 @@ namespace OOP1
             TimeSpan res = date2 - date1;
             return $"Сумарний час подорожі - {res.TotalMinutes} хв.";
         }
+        public bool IsArrivingToday()
+        {
+            if(StartDate.GetDay() == FinishDate.GetDay()) return true ;
+            else return false ;
+        }
     }
 
 }
