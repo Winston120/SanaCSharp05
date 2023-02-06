@@ -87,6 +87,11 @@ namespace OOP1
             double res = Price * Cost.GetExRate();
             return $"Ціна одиниці товару - {res} грн.";
         }
+        public string GetTotalPriceInUAH()
+        {
+            double res = Price * Cost.GetExRate() * Quantity;
+            return $"Загальна вартість усіх наявних на складі товарів даного виду - {res} грн.";
+        }
 
     }
 }
