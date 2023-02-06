@@ -92,6 +92,11 @@ namespace OOP1
             double res = Price * Cost.GetExRate() * Quantity;
             return $"Загальна вартість усіх наявних на складі товарів даного виду - {res} грн.";
         }
+        public string GetTotalWeight()
+        {
+            double res = Quantity * Weight;
+            return $"Загальна вага усіх товарів на складі даного виду - {res} кг.";
+        }
 
     }
 }
