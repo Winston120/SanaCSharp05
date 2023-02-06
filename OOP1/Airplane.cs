@@ -73,6 +73,14 @@ namespace OOP1
         {
             FinishDate = new Date(date);
         }
+
+        public string GetTotalTime()
+        {
+            DateTime date1 = new DateTime(StartDate.GetYear(), StartDate.GetMonth(), StartDate.GetDay(), StartDate.GetHours(), StartDate.GetMinutes(), 0);
+            DateTime date2 = new DateTime(FinishDate.GetYear(), FinishDate.GetMonth(), FinishDate.GetDay(), FinishDate.GetHours(), FinishDate.GetMinutes(), 0);
+            TimeSpan res = date2 - date1;
+            return $"Сумарний час подорожі - {res.TotalMinutes} хв.";
+        }
     }
 
 }
