@@ -47,6 +47,50 @@ namespace OOP1
             Hours = date.Hours;
             Minutes = date.Minutes;
         }
+        public int GetYear()
+        {
+            return Year;
+        }
+        public void SetYear(int year)
+        {
+            if(year > 1980) Year = year;
+        }
+        public int GetMonth()
+        {
+            return Month;
+        }
+        public void SetMonth(int month)
+        {
+            if(month>0 && month<=12) Month = month;
+        }
+        public int GetDay()
+        {
+            return Day;
+        }
+        public void SetDay(int day)
+        {
+            if(day>0 && day<=31) Day = day;
+        }
+        public int GetHours()
+        {
+            return Hours;
+        }
+        public void SetHours(int hours)
+        {
+            if(hours>=0 && hours<24) Hours = hours;
+        }
+        public int GetMinutes()
+        {
+            return Minutes;
+        }
+        public void SetMinutes(int minutes)
+        {
+            if(minutes>=0 && minutes<60) Minutes = minutes;
+        }
+        public string GetDate()
+        {
+            return $"{Day}.{Month}.{Year} {Hours}:{Minutes}";
+        }
     }
    
 }

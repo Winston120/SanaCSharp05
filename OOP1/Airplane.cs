@@ -38,8 +38,40 @@ namespace OOP1
         {
             StartCity= airplane.StartCity;
             FinishCity= airplane.FinishCity;
-            StartDate= new Date(StartDate);
-            FinishDate= new Date(FinishDate);
+            StartDate= new Date(airplane.StartDate);
+            FinishDate= new Date(airplane.FinishDate);
+        }
+        public string GetStartCity()
+        {
+            return StartCity;
+        }
+        public void SetStartCity(string startCity)
+        {
+            StartCity = startCity;
+        }
+        public string GetFinishCity()
+        {
+            return FinishCity;
+        }
+        public void SetFinishCity(string finishCity)
+        {
+            FinishCity = finishCity;
+        }
+        public string GetStartDate()
+        {
+            return $"Час вирушеня - {StartDate.GetDate()}";
+        }
+        public void SetStartDate(Date date)
+        {
+            StartDate = new Date(date);
+        }
+        public string GetFinishDate()
+        {
+            return $"Час прибуття - {FinishDate.GetDate()}";
+        }
+        public void SetFinishDate(Date date)
+        {
+            FinishDate = new Date(date);
         }
     }
 
